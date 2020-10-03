@@ -1,0 +1,7 @@
+@import "../../../styles/variables";
+@import "../FormControls.module";
+
+.textarea {
+  resize: none;
+  @extend %form-control;
+}

@@ -1,0 +1,6 @@
+@import "../../../styles/variables";
+@import "../FormControls.module";
+
+.input {
+  @extend %form-control;
+}

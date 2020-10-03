@@ -1,0 +1,83 @@
+@import "../../../styles/variables";
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  max-height: calc(100% - 43px);
+  width: 272px;
+  margin-left: 12px;
+  border-radius: 3px;
+  background-color: $gray;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.column__header {
+  position: relative;
+  padding: 12px 38px 4px 13px;
+}
+
+.column--new {
+  & .column__header {
+    padding-left: 9px;
+  }
+}
+
+.column__delete-list-btn {
+  position: absolute;
+  right: 8px;
+  top: 22px;
+  opacity: 0.5;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.column__headerInput {
+  font-weight: bold;
+}
+
+.column__cards {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0 9px;
+  padding-top: 5px;
+  overflow-y: auto;
+}
+
+.column__drop-zone {
+  min-height: 10px;
+}
+
+.column__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 16px);
+  padding: 8px 0;
+  margin: 0 auto;
+}
+
+%column__btn {
+  width: 100%;
+}
+
+.column__btn {
+  @extend %column__btn;
+}
+
+.column__btn--create {
+  width: auto;
+  @extend %column__btn;
+}
+
+.column__btn--cancel {
+  width: auto;
+  margin-left: 8px;
+  @extend %column__btn;
+}

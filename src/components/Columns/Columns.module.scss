@@ -1,0 +1,13 @@
+.columns {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.columns__demy-column:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 50px;
+  visibility: hidden;
+}

@@ -1,0 +1,113 @@
+@import "../../../styles/variables";
+
+.button {
+  position: relative;
+  padding: 6px 8px;
+  font-size: 14px;
+  line-height: 19px;
+  color: $dark-blue;
+  text-align: left;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(#000, 0.08);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.button--with-icon {
+  .button__text {
+    margin-left: 8px;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green {
+  color: #fff;
+  outline-color: #959595;
+  background-color: $green;
+
+  &:hover {
+    background-color: rgba($green, 0.8);
+  }
+}
+
+.red {
+  color: #fff;
+  background-color: $red;
+
+  &:hover {
+    background-color: rgba($red, 0.8);
+  }
+}
+
+.dark-gray {
+  color: #fff;
+  background-color: $dark-gray;
+
+  &:hover {
+    background-color: rgba($dark-gray, 0.8);
+  }
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.loading {
+  pointer-events: none;
+
+  & .button__text,
+  & .button__icon {
+    opacity: 0;
+  }
+}
+
+.button__spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  margin-left: -8px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-left: 3px solid #fff;
+  border-radius: 50%;
+  animation: spinner 0.5s infinite linear;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.red.icon {
+  background-color: transparent;
+
+  &:hover {
+    background-color: rgba($red, 0.3);
+  }
+
+  & .button__icon {
+    color: $red;
+  }
+
+  & .button__spinner {
+    border-left: 3px solid $red;
+  }
+}

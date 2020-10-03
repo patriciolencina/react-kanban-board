@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-airbnb",
+    "stylelint-config-prettier",
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "indentation": 2,
+    "selector-max-id": null,
+    "declaration-property-value-blacklist": {
+      "border": {
+        "convention": "none"
+      }
+    },
+  }
+}

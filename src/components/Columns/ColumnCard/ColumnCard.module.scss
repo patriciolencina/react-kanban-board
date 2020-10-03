@@ -1,0 +1,54 @@
+.card {
+  position: relative;
+  margin-top: 8px;
+  padding: 8px 12px;
+  padding-right: 35px;
+  font-size: 13px;
+  line-height: 19px;
+  word-break: break-all;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(9, 45, 66, 0.25);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+
+  &:hover {
+    background-color: rgba(#000, 0.08);
+  }
+}
+
+.card--is-dragging {
+  transition: transform 0.3s ease;
+  transform: rotate(5deg);
+}
+
+.card__delete-btn {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.delete-modal__title {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: bold;
+}
+
+.delete-modal__actions {
+  margin-top: 12px;
+}
+
+.delete-modal__btn {
+  font-size: 16px;
+  margin-left: 8px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "extends": ["react-app", "airbnb", "prettier", "plugin:import/errors", "plugin:import/warnings", "prettier/react"],
+  "plugins": ["react", "import", "prettier"],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "react/prefer-stateless-function": "off",
+    "react/require-default-props": 0,
+    "react/jsx-props-no-spreading": "off",
+    "react/button-has-type": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "no-use-before-define": ["error", { "functions": false, "classes": true }],
+    "semi": 2
+  }
+}
